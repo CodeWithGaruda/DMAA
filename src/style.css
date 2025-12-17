@@ -1,0 +1,168 @@
+/* must be first */
+@import "tailwindcss";
+
+/* ---------------------------------------
+COLOR PALETTE (single mode)
+---------------------------------------- */
+:root {
+  /* Bright Snow */
+  --bright-snow-50: #f0f2f4;
+  --bright-snow-100: #e1e6ea;
+  --bright-snow-200: #c3ccd5;
+  --bright-snow-300: #a5b3c0;
+  --bright-snow-400: #8899aa;
+  --bright-snow-500: #6a7f95;
+  --bright-snow-600: #556677;
+  --bright-snow-700: #3f4c5a;
+  --bright-snow-800: #2a333c;
+  --bright-snow-900: #15191e;
+  --bright-snow-950: #0f1215;
+
+  /* Platinum */
+  --platinum-50: #f0f2f4;
+  --platinum-100: #e1e6ea;
+  --platinum-200: #c4ccd4;
+  --platinum-300: #a6b3bf;
+  --platinum-400: #8999a9;
+  --platinum-500: #6b7f94;
+  --platinum-600: #566676;
+  --platinum-700: #404c59;
+  --platinum-800: #2b333b;
+  --platinum-900: #15191e;
+  --platinum-950: #0f1215;
+
+  /* Neutral base */
+  --slate-50: #f1f2f4;
+  --slate-100: #e3e6e8;
+  --slate-200: #c6ccd2;
+  --slate-300: #aab3bb;
+  --slate-400: #8e99a4;
+  --slate-500: #717f8e;
+  --slate-600: #5b6671;
+  --slate-700: #444c55;
+  --slate-800: #2d3339;
+  --slate-900: #17191c;
+  --slate-950: #101214;
+
+  /* Semantic tokens (USE THESE in UI) */
+  --background: var(--slate-50);
+  --surface: #ffffff;
+  --text-primary: var(--slate-900);
+  --text-secondary: var(--slate-600);
+  --border: var(--slate-200);
+  --accent: var(--bright-snow-700);
+  --danger: #dc2626;
+
+  --radius: 0.75rem;
+}
+
+/* ---------------------------------------
+   TAILWIND THEME EXPOSURE
+---------------------------------------- */
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-danger: var(--danger);
+
+  --radius-lg: var(--radius);
+}
+/* ---------------------------------------
+   Breathing background animation
+---------------------------------------- */
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.45;
+  }
+}
+
+.animate-breathe {
+  animation: breathe 10s ease-in-out infinite;
+}
+
+/* ---------------------------------------
+   Yin–Yang rotating symbol (reusable)
+---------------------------------------- */
+.yin-yang {
+  position: relative;
+  box-sizing: border-box;
+  width: min(30vw, 95vmin);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: white;
+  border: 0.15rem solid black;
+  overflow: hidden;
+  animation: yin-yang-rotate 20s linear infinite;
+}
+
+@keyframes yin-yang-rotate {
+  to {
+    rotate: 1turn;
+  }
+}
+
+.yin-yang::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+      closest-side circle at 50% 25%,
+      black,
+      black 25%,
+      white calc(25% + 1px),
+      white 100%,
+      transparent calc(100% + 1px)
+    ),
+    radial-gradient(
+      closest-side circle at 50% 75%,
+      white,
+      white 25%,
+      black calc(25% + 1px),
+      black 100%,
+      transparent calc(100% + 1px)
+    );
+}
+
+.yin-yang::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    to right,
+    white,
+    white 50%,
+    black 50%,
+    black
+  );
+  z-index: -1;
+}
+/* ---------------------------------------
+  Yin–Yang (configurable)
+---------------------------------------- */
+
+.yin-yang {
+  --yy-size: min(30vw, 95vmin);
+  --yy-rotation-duration: 20s;
+  --yy-rotation-direction: normal; /* NEW */
+
+  position: relative;
+  box-sizing: border-box;
+  width: var(--yy-size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: white;
+  border: 0.15rem solid black;
+  overflow: hidden;
+
+  animation: yin-yang-rotate var(--yy-rotation-duration) linear infinite;
+  animation-direction: var(--yy-rotation-direction);
+}
