@@ -44,7 +44,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setMinDelayDone(true);
-    }, 5000);
+    }, 3500);
     const randomHeading =
       phrases.headings[Math.floor(Math.random() * phrases.headings.length)];
 
@@ -107,7 +107,7 @@ const Home: React.FC = () => {
   }
 
   /* ---------------------------------------
-     NOT AUTHENTICATED
+    NOT AUTHENTICATED
   ---------------------------------------- */
   if (!user) {
     return (
@@ -146,7 +146,7 @@ const Home: React.FC = () => {
   }
 
   /* ---------------------------------------
-     AUTHENTICATED HOME
+    AUTHENTICATED HOME
   ---------------------------------------- */
   return (
     <div className="min-h-screen bg-background">
@@ -158,7 +158,7 @@ const Home: React.FC = () => {
               <span className="text-2xl">🐉</span>
             </div>
             <h1 className="text-xl font-bold text-text-primary">
-              Dragon Kung Fu Academy
+              Dragon Martial Arts Academy
             </h1>
           </div>
 

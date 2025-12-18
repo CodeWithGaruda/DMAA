@@ -77,16 +77,16 @@ const SignIn = () => {
           {/* Logo/Icon area */}
           <div className="mb-8 flex justify-center">
             <div className="relative">
-              <div className="absolute inset-0 bg-accent rounded-full blur-xl opacity-20 animate-pulse" />
-              <div className="relative w-24 h-24 bg-accent rounded-full flex items-center justify-center shadow-lg border-4 border-surface">
-                <span className="text-5xl">🐉</span>
+              <div className="absolute inset-0 bg-slate-950 rounded-full blur-xl opacity-90 animate-pulse" />
+              <div className="relative w-34 h-34 bg-surface rounded-full flex items-center justify-center shadow-lg border-2 border-slate-800">
+                <span className="text-6xl">🐉</span>
               </div>
             </div>
           </div>
 
           {/* Title */}
           <h1 className="text-3xl font-bold text-text-primary mb-3 tracking-tight">
-            Dragon Kung Fu Academy
+            Dragon Martial Arts Academy
           </h1>
 
           {/* Subtitle */}
@@ -144,7 +144,7 @@ const SignIn = () => {
 
         {/* Bottom decorative text */}
         <p className="text-center mt-8 text-text-secondary text-sm font-semibold tracking-wide">
-          🐉 Begin your journey today
+          Begin your journey today
         </p>
       </div>
     </div>
