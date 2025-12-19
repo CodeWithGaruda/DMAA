@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import YinYang from "../components/YinYang";
 import phrases from "../content/phrases.json";
 import Unauthorized from "./utils/Unauthorized";
+import VideoBackdrop from "../components/VideoBackdrop";
+import IndianStick from "../../public/videos/tarun-karrasamu.mp4";
 
 interface User {
   name: string;
   email: string;
-  phoneNumber?: string;
   role?: string;
   pictureUrl?: string;
 }
@@ -153,13 +154,6 @@ const Home: React.FC = () => {
                   <span className="font-medium">{user.email}</span>
                 </p>
 
-                {user.phoneNumber && (
-                  <p className="text-text-secondary flex items-center justify-center sm:justify-start gap-2">
-                    <span className="text-lg">📱</span>
-                    <span className="font-medium">{user.phoneNumber}</span>
-                  </p>
-                )}
-
                 {user.role && (
                   <div className="mt-2 flex justify-center sm:justify-start">
                     <span className="px-3 py-1 bg-accent text-surface text-sm font-semibold rounded-full">
@@ -170,13 +164,34 @@ const Home: React.FC = () => {
               </div>
 
               <p className="text-text-secondary leading-relaxed">
-                You have successfully entered the Dragon Kung Fu Academy. Train
-                your mind, body, and spirit.
+                You have successfully entered the Dragon Martial Arts Academy.
+                Train your mind, body, and spirit.
               </p>
             </div>
           </div>
         </div>
 
+        {/*testing VideoBackDrop*/}
+        <div>
+          <VideoBackdrop
+            videoSrc={IndianStick}
+            header="Indian Stick"
+            content="Stick martial arts are combat systems that use sticks, staffs, or bladed-weapon substitutes to teach fighting techniques.
+                    Although a stick is the tool, the real goal is:
+
+                    timing, distance, coordination, awareness, and discipline
+
+                    Most stick systems also translate directly to:
+
+                    empty-hand combat
+
+                    knife defense
+
+                    sword techniques"
+            blurStrength={2}
+            overlayStrength={0.6}
+          ></VideoBackdrop>
+        </div>
         {/* Quote Section */}
         <div className="mt-10 sm:mt-12 text-center animate-in fade-in duration-700 delay-500">
           <div className="inline-block bg-surface border-2 border-accent rounded-2xl shadow-lg px-6 sm:px-8 py-5 sm:py-6 max-w-xl sm:max-w-2xl">

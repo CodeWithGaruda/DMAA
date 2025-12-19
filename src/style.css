@@ -52,6 +52,7 @@ COLOR PALETTE (single mode)
   --border: var(--slate-200);
   --accent: var(--bright-snow-700);
   --danger: #dc2626;
+  --black:var(--bright-snow-900)
 
   --radius: 0.75rem;
 }

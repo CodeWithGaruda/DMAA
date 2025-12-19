@@ -10,7 +10,7 @@ const ContactUs: React.FC = () => {
 
         <p className="text-text-secondary mb-8">
           Have questions or want to begin your training journey? Reach out to
-          Dragon Kung Fu Academy — we’re happy to help.
+          Dragon Martial Arts Academy — we’re happy to help.
         </p>
 
         <div className="space-y-6">
@@ -19,11 +19,11 @@ const ContactUs: React.FC = () => {
             <div>
               <h3 className="font-semibold text-text-primary">Address</h3>
               <p className="text-text-secondary text-sm">
-                Dragon Kung Fu Academy
+                Dragon Martial Arts Academy
                 <br />
-                Inner Strength Street
+                CF7M+HHQ, Lower Tank Bund Rd, Domalguda, Kavadiguda.
                 <br />
-                Harmony City
+                Hyderabad, Telangana, 500080.
               </p>
             </div>
           </div>
@@ -32,7 +32,7 @@ const ContactUs: React.FC = () => {
             <span className="text-xl">📞</span>
             <div>
               <h3 className="font-semibold text-text-primary">Phone</h3>
-              <p className="text-text-secondary text-sm">+91 90000 00000</p>
+              <p className="text-text-secondary text-sm">+91 91775 19155</p>
             </div>
           </div>
 

@@ -17,11 +17,19 @@ export default function Header() {
     <header className="border-b border-border bg-surface shadow-sm">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-            <span className="text-2xl">🐉</span>
+        <div
+          className="flex items-center gap-3 cursor-pointer"
+          onClick={() => navigate("/home")}
+        >
+          <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-accent bg-background flex items-center justify-center">
+            <img
+              src="/pictures/logo.png"
+              alt="Dragon Martial Arts Academy Logo"
+              className="w-full h-full object-contain"
+            />
           </div>
-          <h1 className="text-xl font-bold text-text-primary">
+
+          <h1 className="text-lg sm:text-xl font-bold text-text-primary whitespace-nowrap">
             Dragon Martial Arts Academy
           </h1>
         </div>
@@ -50,7 +58,7 @@ export default function Header() {
         {/* Mobile Hamburger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-text-primary"
+          className="md:hidden text-text-primary text-xl"
           aria-label="Toggle menu"
         >
           ☰

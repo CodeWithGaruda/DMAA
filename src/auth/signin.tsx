@@ -77,9 +77,13 @@ const SignIn = () => {
           {/* Logo/Icon area */}
           <div className="mb-8 flex justify-center">
             <div className="relative">
-              <div className="absolute inset-0 bg-slate-950 rounded-full blur-xl opacity-90 animate-pulse" />
-              <div className="relative w-34 h-34 bg-surface rounded-full flex items-center justify-center shadow-lg border-2 border-slate-800">
-                <span className="text-6xl">🐉</span>
+              <div className="absolute inset-0 bg-surface-950 rounded-full blur-xl opacity-60 " />
+              <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-accent bg-background flex items-center justify-center">
+                <img
+                  src="/pictures/logo.png"
+                  alt="Dragon Martial Arts Academy Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
             </div>
           </div>
