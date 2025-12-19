@@ -1,0 +1,59 @@
+import React from "react";
+
+const About: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-background px-6 py-12">
+      <div className="max-w-4xl mx-auto bg-surface border border-border rounded-2xl shadow p-10">
+        <h1 className="text-3xl font-bold text-text-primary mb-6">
+          About Dragon Kung Fu Academy
+        </h1>
+
+        <p className="text-text-secondary mb-6 leading-relaxed">
+          Dragon Kung Fu Academy is a place where tradition meets discipline.
+          Rooted in ancient martial arts philosophy, our academy focuses on
+          building strength, balance, focus, and inner harmony.
+        </p>
+
+        <p className="text-text-secondary mb-6 leading-relaxed">
+          We believe Kung Fu is not just about physical techniques, but about
+          cultivating patience, respect, and resilience. Every student embarks
+          on a personal journey of growth—both on and off the mat.
+        </p>
+
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="border border-border rounded-xl p-6 text-center">
+            <h3 className="font-semibold text-text-primary mb-2">
+              🥋 Discipline
+            </h3>
+            <p className="text-text-secondary text-sm">
+              Master control of mind and body through consistent training.
+            </p>
+          </div>
+
+          <div className="border border-border rounded-xl p-6 text-center">
+            <h3 className="font-semibold text-text-primary mb-2">
+              🐉 Strength
+            </h3>
+            <p className="text-text-secondary text-sm">
+              Build physical power and inner confidence step by step.
+            </p>
+          </div>
+
+          <div className="border border-border rounded-xl p-6 text-center">
+            <h3 className="font-semibold text-text-primary mb-2">🧘 Balance</h3>
+            <p className="text-text-secondary text-sm">
+              Learn harmony between movement, breath, and focus.
+            </p>
+          </div>
+        </div>
+
+        <p className="mt-10 text-text-secondary leading-relaxed">
+          Whether you are a beginner or an experienced martial artist, Dragon
+          Kung Fu Academy welcomes you to begin your journey.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default About;

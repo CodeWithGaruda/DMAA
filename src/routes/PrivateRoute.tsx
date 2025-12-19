@@ -1,13 +1,11 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 import { useAuth } from "../auth/AuthContext";
-import type { JSX } from "react";
 
 interface PrivateRouteProps {
-  children: JSX.Element;
   allowedRoles?: ["USER", "MEMBER", "ADMIN"];
 }
 
-const PrivateRoute = ({ children, allowedRoles }: PrivateRouteProps) => {
+const PrivateRoute = ({ allowedRoles }: PrivateRouteProps) => {
   const { user, loading } = useAuth();
 
   if (loading) return <p>Loading...</p>;
@@ -20,7 +18,7 @@ const PrivateRoute = ({ children, allowedRoles }: PrivateRouteProps) => {
     return <Navigate to="/unauthorized" replace />;
   }
 
-  return children;
+  return <Outlet />;
 };
 
 export default PrivateRoute;

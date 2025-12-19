@@ -6,7 +6,7 @@ interface YinYangProps {
   className?: string;
 }
 
-const YinYangSymbol = ({
+const YinYang = ({
   size,
   opacity = 1,
   speed,
@@ -28,4 +28,4 @@ const YinYangSymbol = ({
   );
 };
 
-export default YinYangSymbol;
+export default YinYang;
