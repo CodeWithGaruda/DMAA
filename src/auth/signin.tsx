@@ -76,9 +76,38 @@ const SignIn = () => {
         <div className="bg-surface border-2 border-border rounded-2xl shadow-2xl p-10 text-center transition-all duration-300 hover:shadow-3xl hover:border-accent">
           {/* Logo/Icon area */}
           <div className="mb-8 flex justify-center">
-            <div className="relative">
-              <div className="absolute inset-0 bg-surface-950 rounded-full blur-xl opacity-60 " />
-              <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-accent bg-background flex items-center justify-center">
+            <div className="relative w-40 h-40">
+              {/* Outer breathing glow */}
+              <div
+                className="absolute -inset-12 rounded-full blur-[64px]"
+                style={{
+                  background:
+                    "radial-gradient(circle, rgba(255,170,80,0.45), transparent 70%)",
+                  animation: "dragonBreath 6s ease-in-out infinite",
+                }}
+              />
+
+              {/* Inner breathing glow */}
+              <div
+                className="absolute -inset-7 rounded-full blur-3xl"
+                style={{
+                  background:
+                    "radial-gradient(circle, rgba(255,120,40,0.6), transparent 65%)",
+                  animation: "dragonBreath 4s ease-in-out infinite",
+                }}
+              />
+
+              {/* Slow rotating ring */}
+              <div
+                className="absolute inset-0 rounded-full border-2 border-accent/70"
+                style={{
+                  boxShadow: "0 0 28px rgba(255,140,60,0.7)",
+                  animation: "slowSpin 30s linear infinite",
+                }}
+              />
+
+              {/* Logo */}
+              <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-accent bg-background flex items-center justify-center shadow-2xl">
                 <img
                   src="/pictures/logo.png"
                   alt="Dragon Martial Arts Academy Logo"

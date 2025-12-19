@@ -8,6 +8,7 @@ import Unauthorized from "./pages/utils/Unauthorized";
 import Layout from "./components/Layout";
 import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
+import Gallery from "./pages/Gallery";
 
 function App() {
   return (
@@ -25,18 +26,10 @@ function App() {
             <Route element={<Layout />}>
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/gallery" element={<Gallery />} />
               <Route path="/Contact-us" element={<ContactUs />} />
             </Route>
           </Route>
-
-          {/* <Route
-            path="/home"
-            element={
-              <PrivateRoute allowedRoles={["USER", "MEMBER", "ADMIN"]}>
-                <Home />
-              </PrivateRoute>
-            }
-          /> */}
 
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>

@@ -131,7 +131,7 @@ const Home: React.FC = () => {
                 <img
                   src={user.pictureUrl}
                   alt={user.name}
-                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-accent shadow-lg object-cover"
+                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-1 border-platinum-300 shadow-lg object-cover"
                 />
               ) : (
                 <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-accent shadow-lg bg-accent flex items-center justify-center">
@@ -190,6 +190,7 @@ const Home: React.FC = () => {
                     sword techniques"
             blurStrength={2}
             overlayStrength={0.6}
+            height="80vh"
           ></VideoBackdrop>
         </div>
         {/* Quote Section */}

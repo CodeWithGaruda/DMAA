@@ -167,3 +167,31 @@ COLOR PALETTE (single mode)
   animation: yin-yang-rotate var(--yy-rotation-duration) linear infinite;
   animation-direction: var(--yy-rotation-direction);
 }
+
+
+/* neo effects */
+@keyframes dragonBreath {
+  0% {
+    opacity: 0.35;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 0.35;
+    transform: scale(0.96);
+  }
+}
+
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
