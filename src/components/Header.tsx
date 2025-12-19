@@ -87,7 +87,13 @@ export default function Header() {
             >
               About
             </NavLink>
-
+            <NavLink
+              to="/gallery"
+              className={navLinkClass}
+              onClick={() => setMenuOpen(false)}
+            >
+              Gallery
+            </NavLink>
             <NavLink
               to="/Contact-us"
               className={navLinkClass}

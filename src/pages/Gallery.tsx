@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 type MediaItem = {
   src: string;
@@ -162,14 +162,26 @@ export default function Gallery() {
     setCurrentItem(item);
     setCurrentIndex(index);
     setLightboxOpen(true);
-    document.body.style.overflow = "hidden";
   };
 
   const closeLightbox = () => {
     setLightboxOpen(false);
     setCurrentItem(null);
-    document.body.style.overflow = "auto";
   };
+
+  // Handle body overflow when lightbox opens/closes
+  useEffect(() => {
+    if (lightboxOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup function
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [lightboxOpen]);
 
   const navigateLightbox = (direction: "prev" | "next") => {
     const newIndex =
@@ -187,7 +199,7 @@ export default function Gallery() {
         {/* Header */}
         <div className="mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-3 sm:mb-4">
-            Gallery
+            Our Moments
           </h1>
           <p className="text-slate-600 text-base sm:text-lg">
             Training moments, discipline, and the spirit of the Dragon.

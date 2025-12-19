@@ -171,28 +171,138 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/*testing VideoBackDrop*/}
-        <div>
-          <VideoBackdrop
-            videoSrc={IndianStick}
-            header="Indian Stick"
-            content="Stick martial arts are combat systems that use sticks, staffs, or bladed-weapon substitutes to teach fighting techniques.
+        {/* ---------------------------------------
+   Our Martial Arts Disciplines
+---------------------------------------- */}
+        <div className="mt-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mb-8 text-center">
+            🥋 Our Martial Arts Disciplines
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+            {/* Indian Stick */}
+            <div className="bg-surface border border-border rounded-xl p-6 text-center shadow-sm">
+              <h3 className="text-lg font-semibold text-text-primary mb-1">
+                🥢 Indian Stick (Silambam)
+              </h3>
+              <p className="text-sm font-medium text-accent mb-3">
+                Ancient Indian Weapon Art
+              </p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Silambam is a traditional Indian martial art emphasizing fluid
+                movement, speed, and precise weapon handling. Training builds
+                coordination, agility, and discipline while preserving
+                techniques rooted in India’s martial heritage.
+              </p>
+            </div>
+            <div>
+              <VideoBackdrop
+                videoSrc={IndianStick}
+                header="Indian Stick"
+                content="Stick martial arts are combat systems that use sticks, staffs, or bladed-weapon substitutes to teach fighting techniques.
                     Although a stick is the tool, the real goal is:
-
                     timing, distance, coordination, awareness, and discipline
-
                     Most stick systems also translate directly to:
-
                     empty-hand combat
-
                     knife defense
-
                     sword techniques"
-            blurStrength={2}
-            overlayStrength={0.6}
-            height="80vh"
-          ></VideoBackdrop>
+                blurStrength={2}
+                overlayStrength={0.6}
+                height="80vh"
+              ></VideoBackdrop>
+            </div>
+            {/* Kung Fu */}
+            <div className="bg-surface border border-border rounded-xl p-6 text-center shadow-sm">
+              <h3 className="text-lg font-semibold text-text-primary mb-1">
+                🐉 Kung Fu
+              </h3>
+              <p className="text-sm font-medium text-accent mb-3">
+                Traditional Chinese Martial Art
+              </p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Kung Fu training develops strength, balance, flexibility, and
+                mental focus through structured forms and techniques. This
+                discipline blends physical conditioning with traditional
+                philosophy, promoting self-control, confidence, and respect.
+              </p>
+            </div>
+
+            {/* Nunchaku */}
+            <div className="bg-surface border border-border rounded-xl p-6 text-center shadow-sm">
+              <h3 className="text-lg font-semibold text-text-primary mb-1">
+                🔗 Nunchaku
+              </h3>
+              <p className="text-sm font-medium text-accent mb-3">
+                Weapon Skill & Coordination
+              </p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Nunchaku training focuses on control, rhythm, and accuracy.
+                Students learn disciplined handling techniques that improve
+                coordination, concentration, and performance skills in a safe
+                and structured environment.
+              </p>
+            </div>
+
+            {/* Knife Training */}
+            <div className="bg-surface border border-border rounded-xl p-6 text-center shadow-sm">
+              <h3 className="text-lg font-semibold text-text-primary mb-1">
+                🔪 Knife Training
+              </h3>
+              <p className="text-sm font-medium text-accent mb-3">
+                Controlled Defensive Practice
+              </p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Knife training is taught with strict emphasis on safety,
+                discipline, and responsibility. Instruction focuses on
+                controlled movements, awareness, and traditional martial
+                principles strictly for self-defense and skill development.
+              </p>
+            </div>
+          </div>
         </div>
+
+        {/* ---------------------------------------
+   Why Train With Us Section
+---------------------------------------- */}
+        <div className="mt-14 bg-surface border border-border rounded-2xl p-6 sm:p-8 shadow">
+          <h2 className="text-2xl font-bold text-text-primary mb-6 text-center">
+            Why Train With Dragon Martial Arts Academy?
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="flex gap-4">
+              <span className="text-2xl">✔</span>
+              <p className="text-text-secondary leading-relaxed">
+                Structured training programs rooted in traditional martial arts
+                principles.
+              </p>
+            </div>
+
+            <div className="flex gap-4">
+              <span className="text-2xl">✔</span>
+              <p className="text-text-secondary leading-relaxed">
+                Experienced instructors with proven competitive and teaching
+                backgrounds.
+              </p>
+            </div>
+
+            <div className="flex gap-4">
+              <span className="text-2xl">✔</span>
+              <p className="text-text-secondary leading-relaxed">
+                Safe, disciplined, and respectful training environment for all
+                ages.
+              </p>
+            </div>
+
+            <div className="flex gap-4">
+              <span className="text-2xl">✔</span>
+              <p className="text-text-secondary leading-relaxed">
+                Focus on physical fitness, mental strength, and personal growth.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Quote Section */}
         <div className="mt-10 sm:mt-12 text-center animate-in fade-in duration-700 delay-500">
           <div className="inline-block bg-surface border-2 border-accent rounded-2xl shadow-lg px-6 sm:px-8 py-5 sm:py-6 max-w-xl sm:max-w-2xl">

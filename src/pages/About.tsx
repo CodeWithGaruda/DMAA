@@ -12,6 +12,14 @@ const About: React.FC = () => {
           Dragon Martial Arts Academy is a place where tradition meets
           discipline. Rooted in ancient martial arts philosophy, our academy
           focuses on building strength, balance, focus, and inner harmony.
+          Dragon Martial Arts Academy has built a strong reputation for
+          excellence in traditional and modern martial arts training, including
+          Indian Stick (Silambam), Kung Fu, Nunchaku, and Knife techniques. Our
+          academy has consistently produced skilled practitioners who
+          demonstrate discipline, precision, and respect for martial traditions.
+          Students and trainers from our academy have successfully represented
+          us in demonstrations, championships, and martial arts events at
+          various levels.
         </p>
 
         <p className="text-text-secondary mb-6 leading-relaxed">
@@ -52,6 +60,250 @@ const About: React.FC = () => {
           Whether you are a beginner or an experienced martial artist, Dragon
           Kung Fu Academy welcomes you to begin your journey.
         </p>
+
+        {/* ---------------------------------------
+           Achievements Section (NEW)
+        ---------------------------------------- */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-semibold text-text-primary mb-4">
+            Achievements & Recognition
+          </h2>
+
+          <p className="text-text-secondary mb-6 leading-relaxed">
+            Over the years, Dragon Martial Arts Academy has earned recognition
+            for dedication, discipline, and excellence across multiple martial
+            arts disciplines.
+          </p>
+
+          <ul className="space-y-4">
+            <li className="flex items-start gap-3">
+              <span className="text-accent text-lg">✔</span>
+              <p className="text-text-secondary leading-relaxed">
+                Successful participation in martial arts tournaments and public
+                demonstrations at regional and national levels.
+              </p>
+            </li>
+
+            <li className="flex items-start gap-3">
+              <span className="text-accent text-lg">✔</span>
+              <p className="text-text-secondary leading-relaxed">
+                Recognition for excellence in both traditional weapon training
+                and empty-hand combat techniques.
+              </p>
+            </li>
+
+            <li className="flex items-start gap-3">
+              <span className="text-accent text-lg">✔</span>
+              <p className="text-text-secondary leading-relaxed">
+                Consistent performance and instruction in Indian Stick Martial
+                Arts, Kung Fu forms, and weapon-based disciplines.
+              </p>
+            </li>
+
+            <li className="flex items-start gap-3">
+              <span className="text-accent text-lg">✔</span>
+              <p className="text-text-secondary leading-relaxed">
+                Recognition and affiliation with respected martial arts
+                associations and certified training bodies.
+              </p>
+            </li>
+          </ul>
+        </div>
+        {/* ---------------------------------------
+   Medals & Awards Section
+---------------------------------------- */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-semibold text-text-primary mb-6">
+            🏆 Medals & Awards
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Gold Medal */}
+            <div className="border border-border rounded-xl p-6 bg-background text-center">
+              <h3 className="text-lg font-semibold text-text-primary mb-2">
+                🥇 Gold Medals
+              </h3>
+              <p className="text-sm font-medium text-accent mb-3">
+                Excellence & Mastery
+              </p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Awarded for outstanding performance in Indian Stick (Silambam),
+                Kung Fu forms, and weapon-based disciplines. These medals
+                represent peak skill, precision, and years of disciplined
+                training.
+              </p>
+            </div>
+
+            {/* Silver Medal */}
+            <div className="border border-border rounded-xl p-6 bg-background text-center">
+              <h3 className="text-lg font-semibold text-text-primary mb-2">
+                🥈 Silver Medals
+              </h3>
+              <p className="text-sm font-medium text-accent mb-3">
+                Consistency & Technique
+              </p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Earned in national and regional championships for Nunchaku and
+                Kung Fu events. Silver medals reflect technical accuracy,
+                control, and competitive excellence.
+              </p>
+            </div>
+
+            {/* Bronze Medal */}
+            <div className="border border-border rounded-xl p-6 bg-background text-center">
+              <h3 className="text-lg font-semibold text-text-primary mb-2">
+                🥉 Bronze Medals
+              </h3>
+              <p className="text-sm font-medium text-accent mb-3">
+                Determination & Growth
+              </p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Recognizes strong performances in martial arts competitions and
+                demonstrations, including weapon handling and self-defense
+                disciplines. A symbol of perseverance and continuous
+                improvement.
+              </p>
+            </div>
+
+            {/* Special Awards */}
+            <div className="border border-border rounded-xl p-6 bg-background text-center">
+              <h3 className="text-lg font-semibold text-text-primary mb-2">
+                🏅 Special Awards
+              </h3>
+              <p className="text-sm font-medium text-accent mb-3">
+                Weapon Control & Performance
+              </p>
+              <ul className="text-text-secondary text-sm leading-relaxed space-y-1">
+                <li>Indian Stick (Silambam)</li>
+                <li>Nunchaku</li>
+                <li>Knife Technique (Traditional)</li>
+                <li>Form, Balance & Discipline</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* ---------------------------------------
+   Women Empowerment Section
+---------------------------------------- */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-semibold text-text-primary mb-4">
+            🌸 Women Empowerment Through Martial Arts
+          </h2>
+
+          <p className="text-text-secondary leading-relaxed mb-4">
+            At{" "}
+            <span className="font-medium text-text-primary">
+              Dragon Martial Arts Academy
+            </span>
+            , women empowerment is central to our mission. Through disciplined
+            training in Kung Fu, Indian Stick (Silambam), Nunchaku, and
+            controlled self-defense techniques, we provide a safe, respectful,
+            and inclusive environment where women build strength, confidence,
+            and self-belief.
+          </p>
+
+          <p className="text-text-secondary leading-relaxed mb-4">
+            Martial arts training enhances physical fitness, focus, balance, and
+            awareness while strengthening mental resilience and self-discipline.
+            Beyond physical skills, it empowers women to overcome fear, gain
+            confidence, and face challenges with courage and clarity.
+          </p>
+
+          <p className="text-text-secondary leading-relaxed">
+            Guided by values of respect, equality, and safety, our programs
+            inspire women of all ages to stand strong, independent, and
+            confident—carrying the true spirit and values of martial arts into
+            their daily lives and communities.
+          </p>
+        </div>
+        {/* ---------------------------------------
+   Our Trainers Section
+---------------------------------------- */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-semibold text-text-primary mb-6">
+            👤 Our Trainers
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Head Instructor */}
+            <div className="border border-border rounded-xl p-6 bg-background">
+              <h3 className="text-lg font-semibold text-text-primary mb-1">
+                🥋 Head Instructor & Founder
+              </h3>
+              <p className="font-medium text-accent mb-3">Master Arun Kumar</p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                With over 15 years of martial arts experience, Master Arun Kumar
+                leads the academy with deep knowledge and discipline.
+                Specializing in Kung Fu and Indian Stick (Silambam), he is
+                committed to preserving traditional techniques while guiding
+                students toward physical and mental excellence.
+              </p>
+            </div>
+
+            {/* Senior Kung Fu Trainer */}
+            <div className="border border-border rounded-xl p-6 bg-background">
+              <h3 className="text-lg font-semibold text-text-primary mb-1">
+                🐉 Senior Kung Fu Trainer
+              </h3>
+              <p className="font-medium text-accent mb-3">Instructor Li Wei</p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Instructor Li Wei is an expert in traditional Kung Fu forms and
+                conditioning. Known for his precise technique and patient
+                teaching style, he focuses on building strong foundations,
+                flexibility, and discipline in students of all levels.
+              </p>
+            </div>
+
+            {/* Nunchaku Specialist */}
+            <div className="border border-border rounded-xl p-6 bg-background">
+              <h3 className="text-lg font-semibold text-text-primary mb-1">
+                🔗 Nunchaku Specialist
+              </h3>
+              <p className="font-medium text-accent mb-3">
+                Instructor Ramesh Patel
+              </p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Instructor Ramesh Patel specializes in Nunchaku training and
+                weapon coordination. His sessions emphasize control, rhythm, and
+                accuracy, helping students develop confidence and advanced
+                weapon-handling skills in a safe environment.
+              </p>
+            </div>
+
+            {/* Silambam Trainer */}
+            <div className="border border-border rounded-xl p-6 bg-background">
+              <h3 className="text-lg font-semibold text-text-primary mb-1">
+                🥢 Indian Stick (Silambam) Trainer
+              </h3>
+              <p className="font-medium text-accent mb-3">
+                Instructor Karthik Raj
+              </p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Instructor Karthik Raj is a dedicated practitioner of Indian
+                Stick (Silambam) with strong expertise in traditional footwork
+                and weapon flow. He focuses on speed, agility, and precision
+                while maintaining respect for the art’s cultural heritage.
+              </p>
+            </div>
+
+            {/* Self-Defense & Knife Trainer */}
+            <div className="border border-border rounded-xl p-6 bg-background md:col-span-2">
+              <h3 className="text-lg font-semibold text-text-primary mb-1">
+                🔪 Self-Defense & Knife Training Instructor
+              </h3>
+              <p className="font-medium text-accent mb-3">
+                Instructor Ananya Devi
+              </p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Instructor Ananya Devi specializes in self-defense and
+                controlled knife training, with a strong emphasis on awareness,
+                discipline, and safety. She plays a key role in women
+                empowerment programs, helping students build confidence,
+                resilience, and responsible self-defense skills.
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* ---------------------------------------
            Application Form Section
