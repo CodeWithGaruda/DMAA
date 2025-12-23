@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const About: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-background px-4 sm:px-6 py-10 sm:py-12">
       <div className="max-w-4xl mx-auto bg-surface border border-border rounded-2xl shadow p-6 sm:p-10">
@@ -330,6 +333,34 @@ const About: React.FC = () => {
                 📄 Download Application Form
               </a>
             </div>
+          </div>
+        </div>
+
+        {/* ---------------------------------------
+        Online Application Section (NEW)
+      ---------------------------------------- */}
+        <div className="mt-14">
+          <div className="bg-background border-2 border-accent rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
+            <div className="flex-1 text-center sm:text-left">
+              <h2 className="text-2xl font-semibold text-text-primary mb-2">
+                Apply Online for Membership
+              </h2>
+              <p className="text-text-secondary leading-relaxed">
+                Already a registered user? You can now apply for membership
+                online. Fill out the application form, review academy rules, and
+                submit your details securely.
+              </p>
+              <p className="mt-3 text-sm text-text-secondary italic">
+                * Online applications are available for adults only.
+              </p>
+            </div>
+
+            <button
+              className="inline-flex items-center justify-center bg-accent text-surface font-semibold px-6 py-3 rounded-lg shadow hover:opacity-90 transition-opacity duration-200 text-sm sm:text-base"
+              onClick={() => navigate("/apply")}
+            >
+              🥋 Apply Online
+            </button>
           </div>
         </div>
       </div>
