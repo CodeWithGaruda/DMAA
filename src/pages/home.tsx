@@ -200,10 +200,31 @@ const Home: React.FC = () => {
                 Ancient Indian Weapon Art
               </p>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Silambam is a traditional Indian martial art emphasizing fluid
-                movement, speed, and precise weapon handling. Training builds
-                coordination, agility, and discipline while preserving
-                techniques rooted in India’s martial heritage.
+                Silambam is an ancient Indian stick-based martial art that
+                originated in the Tamil region of South India and is deeply
+                rooted in the country’s cultural and warrior traditions.
+                Practiced for thousands of years, Silambam uses a flexible
+                bamboo staff as its primary weapon and emphasizes speed,
+                precision, balance, and fluid body movement. Unlike purely
+                aggressive combat styles, Silambam blends physical strength with
+                agility, rhythm, and mental focus, making it both a powerful
+                self-defense system and a graceful art form. The techniques
+                involve swift footwork, spinning motions, blocks, strikes, and
+                evasive maneuvers that train the practitioner to respond
+                instinctively to an opponent’s movement. Historically, Silambam
+                was taught to warriors for battlefield readiness and later
+                practiced by common people as a means of self-protection and
+                physical fitness. Beyond combat, Silambam promotes discipline,
+                coordination, flexibility, and inner awareness, contributing to
+                overall physical and mental well-being. The art also carries
+                strong philosophical values, teaching respect, control, and
+                harmony between mind and body. Today, Silambam is gaining global
+                recognition as practitioners and cultural organizations work to
+                preserve and promote this traditional Indian martial art.
+                Whether practiced for self-defense, fitness, or cultural
+                heritage, Silambam stands as a proud symbol of India’s ancient
+                wisdom, showcasing how martial skill, tradition, and artistry
+                can coexist in a single, dynamic discipline.
               </p>
             </div>
             <div>
@@ -231,10 +252,30 @@ const Home: React.FC = () => {
                 Traditional Chinese Martial Art
               </p>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Kung Fu training develops strength, balance, flexibility, and
-                mental focus through structured forms and techniques. This
-                discipline blends physical conditioning with traditional
-                philosophy, promoting self-control, confidence, and respect.
+                Kung Fu is a traditional Chinese martial art that represents a
+                deep fusion of combat techniques, philosophy, discipline, and
+                self-cultivation. With a history spanning thousands of years,
+                Kung Fu is not just a fighting system but a way of life that
+                emphasizes balance between mind, body, and spirit. It includes a
+                wide range of styles, each inspired by nature, animals, and
+                ancient warfare practices, focusing on movements that develop
+                strength, flexibility, speed, and coordination. Kung Fu training
+                involves forms (known as katas or taolu), stances, strikes,
+                kicks, blocks, joint locks, and weapon techniques, all performed
+                with precision and control. Beyond physical skill, Kung Fu
+                teaches patience, humility, respect, and perseverance,
+                encouraging practitioners to master themselves before overcoming
+                others. It is widely practiced for self-defense, physical
+                fitness, mental clarity, and spiritual growth. Breathing control
+                and meditation are integral parts of training, helping
+                practitioners build inner calm and focus. Over time, Kung Fu has
+                influenced global martial arts and popular culture, symbolizing
+                discipline and inner strength. Today, it is practiced worldwide
+                by people of all ages, preserving its ancient traditions while
+                adapting to modern lifestyles. Kung Fu stands as a powerful
+                expression of cultural heritage, demonstrating how martial
+                practice can shape character, promote harmony, and inspire
+                lifelong personal development.
               </p>
             </div>
             <div>
@@ -259,10 +300,30 @@ const Home: React.FC = () => {
                 Weapon Skill & Coordination
               </p>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Nunchaku training focuses on control, rhythm, and accuracy.
-                Students learn disciplined handling techniques that improve
-                coordination, concentration, and performance skills in a safe
-                and structured environment.
+                The Nunchaku is a traditional martial arts weapon known for its
+                speed, precision, and dynamic movement, widely associated with
+                East Asian martial traditions. Consisting of two short sticks
+                connected by a rope or chain, the Nunchaku was originally
+                developed as a simple agricultural tool and later evolved into
+                an effective self-defense weapon. Its design allows for rapid
+                strikes, fluid transitions, and defensive maneuvers, making it
+                both versatile and challenging to master. Training with the
+                Nunchaku enhances hand–eye coordination, reflexes, timing, and
+                spatial awareness, as even a small mistake demands discipline
+                and control. Beyond combat effectiveness, Nunchaku practice
+                emphasizes rhythm, flow, and continuous motion, turning
+                technique into an expressive martial art. Practitioners learn
+                spins, blocks, strikes, and trapping movements that require
+                focus, patience, and consistent practice. The weapon gained
+                global popularity through martial arts demonstrations and
+                cinema, where it became a symbol of speed, confidence, and
+                mastery. However, true Nunchaku training goes far beyond visual
+                flair, teaching responsibility, self-control, and respect for
+                tradition. Today, Nunchaku is practiced worldwide in martial
+                arts schools for self-defense training, fitness, and performance
+                art. It stands as a powerful example of how simplicity in design
+                can lead to depth in skill, transforming a humble weapon into a
+                discipline that strengthens both the body and the mind.
               </p>
             </div>
             <div>
@@ -287,10 +348,32 @@ const Home: React.FC = () => {
                 Controlled Defensive Practice
               </p>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Knife training is taught with strict emphasis on safety,
-                discipline, and responsibility. Instruction focuses on
-                controlled movements, awareness, and traditional martial
-                principles strictly for self-defense and skill development.
+                Knife martial arts represent one of the most practical and
+                disciplined aspects of traditional combat training, focusing on
+                precision, awareness, and control rather than brute force.
+                Rooted in various martial traditions across Asia and other parts
+                of the world, knife training was historically developed for
+                close-range self-defense and survival. Practitioners learn how
+                to handle a blade with respect and responsibility, understanding
+                that mastery lies in technique, timing, and mental composure.
+                Knife martial arts emphasize fluid movement, footwork, angles of
+                attack, and defensive strategies such as evasion, redirection,
+                and controlled counterattacks. Unlike long-range weapons, knife
+                training sharpens a practitioner’s reflexes and situational
+                awareness, as encounters demand calm decision-making under
+                pressure. Beyond combat application, practicing knife techniques
+                improves hand–eye coordination, balance, and focus, while also
+                cultivating discipline and self-control. Training often includes
+                solo drills, forms, and partner exercises that simulate
+                real-world scenarios in a safe and structured manner.
+                Philosophically, knife martial arts teach restraint, respect for
+                life, and ethical use of skill, reinforcing that the blade is a
+                tool of last resort. In modern times, knife martial arts are
+                practiced for self-defense education, physical conditioning, and
+                preservation of traditional combat knowledge. They stand as a
+                powerful reminder that true martial strength comes not from
+                aggression, but from awareness, discipline, and mastery over
+                both the weapon and oneself.
               </p>
             </div>
             <div>
