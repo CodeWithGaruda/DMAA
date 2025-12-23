@@ -8,27 +8,48 @@ const MemberPage = () => {
   const { user, loading } = useAuth();
 
   if (loading) {
-    return <div className="p-6">Loading...</div>;
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <p className="text-text-secondary text-sm">
+          Preparing your dojo space…
+        </p>
+      </div>
+    );
   }
 
   if (!user) {
-    return null; // or redirect
+    return null; // protected by route
   }
 
   return (
     <div className="min-h-screen bg-background px-4 sm:px-6 py-10">
-      <div className="max-w-4xl mx-auto space-y-8">
+      <div className="max-w-4xl mx-auto space-y-10">
+        {/* ---------------------------------------
+            Personal Snapshot (Top)
+        ---------------------------------------- */}
         <PersonalTrainingSnapshot
           name={user.name}
           email={user.email}
           role={user.role}
-          pictureUrl={`https://lh3.googleusercontent.com/a/ACg8ocKgvUSMcYiSCw17RjQzik1xc4Kf7YSzGkM76n46nlHjuR3D9Kwh=s96-c`}
+          pictureUrl={user.pictureUrl}
           joinedOn="2025"
         />
+
+        {/* ---------------------------------------
+            Notifications
+        ---------------------------------------- */}
+        <NotificationsPanel />
+
+        {/* ---------------------------------------
+            Post Media Composer
+        ---------------------------------------- */}
+        <PostMediaComposer />
+
+        {/* ---------------------------------------
+            Quote of the Day (Reflection)
+        ---------------------------------------- */}
+        <QuoteOfTheDay />
       </div>
-      <NotificationsPanel />
-      <PostMediaComposer />
-      <QuoteOfTheDay />
     </div>
   );
 };

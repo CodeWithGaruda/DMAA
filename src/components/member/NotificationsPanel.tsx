@@ -1,8 +1,17 @@
-import React from "react";
-import memberContent from "../../content/member.json";
+import React, { useState } from "react";
+
+type Notification = {
+  id: string;
+  message: string;
+};
+
+const STORAGE_KEY = "academy_notifications";
 
 const NotificationsPanel: React.FC = () => {
-  const notifications = memberContent.notifications;
+  const [notifications] = useState<Notification[]>(() => {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    return stored ? JSON.parse(stored) : [];
+  });
 
   return (
     <div className="bg-surface border border-border rounded-2xl shadow-sm p-6">
@@ -21,15 +30,12 @@ const NotificationsPanel: React.FC = () => {
             No notifications at the moment.
           </p>
         ) : (
-          notifications.map((note, index) => (
+          notifications.map((note) => (
             <div
-              key={index}
+              key={note.id}
               className="border border-border rounded-lg p-3 text-sm text-text-secondary bg-background"
             >
-              <div className="flex items-start gap-2">
-                <span className="text-accent mt-0.5">•</span>
-                <p className="leading-relaxed">{note}</p>
-              </div>
+              • {note.message}
             </div>
           ))
         )}

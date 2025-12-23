@@ -24,7 +24,13 @@ const About: React.FC = () => {
           us in demonstrations, championships, and martial arts events at
           various levels.
         </p>
-
+        <div className="w-full h-56 sm:h-72 md:h-80">
+          <img
+            src="/pictures/sample.jpeg"
+            alt="Dragon Martial Arts Academy"
+            className="w-full h-full object-cover"
+          />
+        </div>
         <p className="text-text-secondary mb-6 leading-relaxed">
           We believe Kung Fu is not just about physical techniques, but about
           cultivating patience, respect, and resilience. Every student embarks

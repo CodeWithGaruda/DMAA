@@ -4,6 +4,11 @@ import phrases from "../content/phrases.json";
 import Unauthorized from "./utils/Unauthorized";
 import VideoBackdrop from "../components/VideoBackdrop";
 import IndianStick from "../../public/videos/tarun-karrasamu.mp4";
+import KungFu from "../../public/videos/kungFu.mp4";
+import Nunchaku from "../../public/videos/nunchuk.mp4";
+import Knife from "../../public/videos/knife.mp4";
+import HeroMediaBackdrop from "../components/HeroMediaBackdrop";
+import { galleryMedia } from "../assets/gallery";
 
 interface User {
   name: string;
@@ -120,6 +125,12 @@ const Home: React.FC = () => {
   ---------------------------------------- */
   return (
     <div className="min-h-screen bg-background">
+      <HeroMediaBackdrop
+        media={galleryMedia}
+        height="90vh"
+        caption="Dragon Martial Arts Acedemy"
+        blurStrength={5}
+      />
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
         {/* Welcome Card */}
@@ -226,7 +237,19 @@ const Home: React.FC = () => {
                 philosophy, promoting self-control, confidence, and respect.
               </p>
             </div>
-
+            <div>
+              <VideoBackdrop
+                videoSrc={KungFu}
+                header="Kung Fu"
+                content="Kung Fu training develops strength, balance, flexibility, and
+                mental focus through structured forms and techniques. This
+                discipline blends physical conditioning with traditional
+                philosophy, promoting self-control, confidence, and respect."
+                blurStrength={2}
+                overlayStrength={0.6}
+                height="80vh"
+              ></VideoBackdrop>
+            </div>
             {/* Nunchaku */}
             <div className="bg-surface border border-border rounded-xl p-6 text-center shadow-sm">
               <h3 className="text-lg font-semibold text-text-primary mb-1">
@@ -242,7 +265,19 @@ const Home: React.FC = () => {
                 and structured environment.
               </p>
             </div>
-
+            <div>
+              <VideoBackdrop
+                videoSrc={Nunchaku}
+                header="Nunchaku"
+                content=" Nunchaku training focuses on control, rhythm, and accuracy.
+                Students learn disciplined handling techniques that improve
+                coordination, concentration, and performance skills in a safe
+                and structured environment."
+                blurStrength={2}
+                overlayStrength={0.6}
+                height="80vh"
+              ></VideoBackdrop>
+            </div>
             {/* Knife Training */}
             <div className="bg-surface border border-border rounded-xl p-6 text-center shadow-sm">
               <h3 className="text-lg font-semibold text-text-primary mb-1">
@@ -257,6 +292,19 @@ const Home: React.FC = () => {
                 controlled movements, awareness, and traditional martial
                 principles strictly for self-defense and skill development.
               </p>
+            </div>
+            <div>
+              <VideoBackdrop
+                videoSrc={Knife}
+                header="Knife"
+                content="Knife training is taught with strict emphasis on safety,
+                discipline, and responsibility. Instruction focuses on
+                controlled movements, awareness, and traditional martial
+                principles strictly for self-defense and skill development."
+                blurStrength={2}
+                overlayStrength={0.6}
+                height="80vh"
+              ></VideoBackdrop>
             </div>
           </div>
         </div>
