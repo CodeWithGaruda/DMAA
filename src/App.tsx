@@ -15,32 +15,32 @@ import Admin from "./pages/Admin";
 
 function App() {
   return (
-    <AuthProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/login" element={<SignIn />} />
-          <Route path="/unauthorized" element={<Unauthorized />} />
+    // <AuthProvider>
+    <BrowserRouter>
+      <Routes>
+        {/* <Route path="/login" element={<SignIn />} /> */}
+        {/* <Route path="/unauthorized" element={<Unauthorized />} /> */}
 
-          <Route
-            element={
-              <PrivateRoute allowedRoles={["USER", "MEMBER", "ADMIN"]} />
-            }
-          >
-            <Route element={<Layout />}>
-              <Route path="/home" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/gallery" element={<Gallery />} />
-              <Route path="/Contact-us" element={<ContactUs />} />
-              <Route path="/apply" element={<Apply />} />
-              <Route path="/member" element={<Member />} />
-              <Route path="/admin" element={<Admin />} />
-            </Route>
+        <Route
+        // element={
+        //   <PrivateRoute allowedRoles={["USER", "MEMBER", "ADMIN"]} />
+        // }
+        >
+          <Route element={<Layout />}>
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/Contact-us" element={<ContactUs />} />
+            <Route path="/apply" element={<Apply />} />
+            <Route path="/member" element={<Member />} />
+            <Route path="/admin" element={<Admin />} />
           </Route>
+        </Route>
 
-          <Route path="*" element={<Navigate to="/login" replace />} />
-        </Routes>
-      </BrowserRouter>
-    </AuthProvider>
+        <Route path="*" element={<Navigate to="/home" replace />} />
+      </Routes>
+    </BrowserRouter>
+    // </AuthProvider>
   );
 }
 

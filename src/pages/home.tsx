@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import YinYang from "../components/YinYang";
 import phrases from "../content/phrases.json";
-import Unauthorized from "./utils/Unauthorized";
 import VideoBackdrop from "../components/VideoBackdrop";
 import IndianStick from "../../public/videos/tarun-karrasamu.mp4";
 import KungFu from "../../public/videos/kungFu.mp4";
@@ -10,65 +9,31 @@ import Knife from "../../public/videos/knife.mp4";
 import HeroMediaBackdrop from "../components/HeroMediaBackdrop";
 import { galleryMedia } from "../assets/gallery";
 
-interface User {
-  name: string;
-  email: string;
-  role?: string;
-  pictureUrl?: string;
-}
-
 const Home: React.FC = () => {
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
   const [minDelayDone, setMinDelayDone] = useState<boolean>(false);
-  const [heading, setHeading] = useState<string>("");
-  const [description, setDescription] = useState<string>("");
+  const [heading] = useState(
+    () => phrases.headings[Math.floor(Math.random() * phrases.headings.length)]
+  );
 
-  useEffect(() => {
-    const fetchUser = async (): Promise<void> => {
-      try {
-        const res = await fetch("http://localhost:8080/api/user", {
-          credentials: "include",
-        });
-
-        if (!res.ok) {
-          setUser(null);
-        } else {
-          const data: User = await res.json();
-          setUser(data);
-        }
-      } catch (error) {
-        console.error("Fetch /api/user failed", error);
-        setUser(null);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchUser();
-  }, []);
+  const [description] = useState(
+    () =>
+      phrases.descriptions[
+        Math.floor(Math.random() * phrases.descriptions.length)
+      ]
+  );
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setMinDelayDone(true);
-    }, 2000);
-    const randomHeading =
-      phrases.headings[Math.floor(Math.random() * phrases.headings.length)];
+    }, 4000);
 
-    const randomDescription =
-      phrases.descriptions[
-        Math.floor(Math.random() * phrases.descriptions.length)
-      ];
-
-    setHeading(randomHeading);
-    setDescription(randomDescription);
     return () => clearTimeout(timer);
   }, []);
 
   /* ---------------------------------------
      LOADING STATE
   ---------------------------------------- */
-  if (loading || !minDelayDone) {
+  if (!minDelayDone) {
     return (
       <div className="relative min-h-screen flex flex-col items-center justify-center bg-background overflow-hidden">
         {/* Background decorative elements */}
@@ -116,9 +81,9 @@ const Home: React.FC = () => {
   /* ---------------------------------------
     NOT AUTHENTICATED
   ---------------------------------------- */
-  if (!user) {
-    <Unauthorized />;
-  }
+  // if (!user) {
+  //   <Unauthorized />;
+  // }
 
   /* ---------------------------------------
     AUTHENTICATED HOME
@@ -133,55 +98,6 @@ const Home: React.FC = () => {
       />
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        {/* Welcome Card */}
-        <div className="bg-surface border-2 border-border rounded-2xl shadow-lg p-6 sm:p-8 mb-8 animate-in fade-in slide-in-from-top-4 duration-500">
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-            {/* Profile Picture */}
-            <div className="flex-shrink-0">
-              {user.pictureUrl ? (
-                <img
-                  src={user.pictureUrl}
-                  alt={user.name}
-                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-1 border-platinum-300 shadow-lg object-cover"
-                />
-              ) : (
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-accent shadow-lg bg-accent flex items-center justify-center">
-                  <span className="text-3xl sm:text-4xl text-surface">
-                    {user.name.charAt(0).toUpperCase()}
-                  </span>
-                </div>
-              )}
-            </div>
-
-            {/* User Info */}
-            <div className="flex-1 text-center sm:text-left">
-              <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mb-2">
-                Welcome, {user.name}
-              </h2>
-
-              <div className="space-y-1 mb-4">
-                <p className="text-text-secondary flex items-center justify-center sm:justify-start gap-2">
-                  <span className="text-lg">📧</span>
-                  <span className="font-medium">{user.email}</span>
-                </p>
-
-                {user.role && (
-                  <div className="mt-2 flex justify-center sm:justify-start">
-                    <span className="px-3 py-1 bg-accent text-surface text-sm font-semibold rounded-full">
-                      {user.role}
-                    </span>
-                  </div>
-                )}
-              </div>
-
-              <p className="text-text-secondary leading-relaxed">
-                You have successfully entered the Dragon Martial Arts Academy.
-                Train your mind, body, and spirit.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* ---------------------------------------
    Our Martial Arts Disciplines
 ---------------------------------------- */}

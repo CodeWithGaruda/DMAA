@@ -9,8 +9,9 @@ import kf3 from "./videos/KungFu3.mp4";
 import video6 from "./videos/t6.mp4";
 import kf4 from "./videos/KungFu4.mp4";
 import kf5 from "./videos/KungFu5.mp4";
+import type { MediaItem } from "../../components/HeroMediaBackdrop";
 
-export const galleryMedia = [
+export const galleryMedia: MediaItem[] = [
   { type: "video", src: rm },
   { type: "video", src: mainVideo },
   { type: "video", src: kf1 },

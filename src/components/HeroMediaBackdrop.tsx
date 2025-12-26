@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-type MediaItem = {
+export type MediaItem = {
   type: "image" | "video";
   src: string;
 };

@@ -5,21 +5,21 @@ import PostMediaComposer from "../components/member/PostMediaComposer";
 import QuoteOfTheDay from "../components/member/QuoteOfTheDay";
 
 const MemberPage = () => {
-  const { user, loading } = useAuth();
+  // const { user, loading } = useAuth();
 
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-background">
-        <p className="text-text-secondary text-sm">
-          Preparing your dojo space…
-        </p>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className="min-h-screen flex items-center justify-center bg-background">
+  //       <p className="text-text-secondary text-sm">
+  //         Preparing your dojo space…
+  //       </p>
+  //     </div>
+  //   );
+  // }
 
-  if (!user) {
-    return null; // protected by route
-  }
+  // if (!user) {
+  //   return null; // protected by route
+  // }
 
   return (
     <div className="min-h-screen bg-background px-4 sm:px-6 py-10">
@@ -27,13 +27,13 @@ const MemberPage = () => {
         {/* ---------------------------------------
             Personal Snapshot (Top)
         ---------------------------------------- */}
-        <PersonalTrainingSnapshot
+        {/* <PersonalTrainingSnapshot
           name={user.name}
           email={user.email}
           role={user.role}
           pictureUrl={user.pictureUrl}
           joinedOn="2025"
-        />
+        /> */}
 
         {/* ---------------------------------------
             Notifications
