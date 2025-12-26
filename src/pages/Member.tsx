@@ -1,5 +1,5 @@
-import { useAuth } from "../auth/AuthContext";
-import PersonalTrainingSnapshot from "../components/member/PersonalTrainingSnapshot";
+// import { useAuth } from "../auth/AuthContext";
+// import PersonalTrainingSnapshot from "../components/member/PersonalTrainingSnapshot";
 import NotificationsPanel from "../components/member/NotificationsPanel";
 import PostMediaComposer from "../components/member/PostMediaComposer";
 import QuoteOfTheDay from "../components/member/QuoteOfTheDay";
