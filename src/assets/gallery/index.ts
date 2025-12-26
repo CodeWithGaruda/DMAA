@@ -1,5 +1,4 @@
 import rm from "./videos/RakeshMasterStick.mp4";
-import mainVideo from "./videos/mainVideo.mp4";
 import video1 from "./videos/t1.mp4";
 import kf1 from "./videos/KungFu.mp4";
 import video2 from "./videos/t2.mp4";
@@ -13,7 +12,6 @@ import type { MediaItem } from "../../components/HeroMediaBackdrop";
 
 export const galleryMedia: MediaItem[] = [
   { type: "video", src: rm },
-  { type: "video", src: mainVideo },
   { type: "video", src: kf1 },
   { type: "video", src: video6 },
   { type: "video", src: kf2 },
