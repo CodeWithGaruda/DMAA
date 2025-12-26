@@ -16,7 +16,7 @@ import Admin from "./pages/Admin";
 function App() {
   return (
     // <AuthProvider>
-    <BrowserRouter>
+    <BrowserRouter basename="/DMAA">
       <Routes>
         {/* <Route path="/login" element={<SignIn />} /> */}
         {/* <Route path="/unauthorized" element={<Unauthorized />} /> */}
