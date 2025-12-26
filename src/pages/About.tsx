@@ -26,7 +26,7 @@ const About: React.FC = () => {
         </p>
         <div className="w-full h-56 sm:h-72 md:h-80">
           <img
-            src="/pictures/sample.jpeg"
+            src="pictures/sample.jpeg"
             alt="Dragon Martial Arts Academy"
             className="w-full h-full object-cover"
           />
